@@ -103,7 +103,7 @@ function Invoke-ParallelPipeline {
                 
                 $Parameters = New-GenericList
                 $Parameters.Add($InputQueue)
-                $Parameters.Add($OutputQueue)
+                $Parameters.Add($CombinedInputQueue)
                 $Parameters.Add($CombinerStack)
                 $Parameters.Add($ThreadGuid)
                 $Parameters.Add($QueuingAddCompleteSignal)

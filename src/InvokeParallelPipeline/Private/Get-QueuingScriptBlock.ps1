@@ -28,6 +28,7 @@ function Get-QueuingScriptBlock {
 
             $null = $RunnerStack.Take()
             $Signal.WaitOne()
+            $Signal.Set()
             if($RunnerStack.Count -eq 0) {
                 $RunnerStack.CompleteAdding()
                 $OutputQueue.CompleteAdding()
